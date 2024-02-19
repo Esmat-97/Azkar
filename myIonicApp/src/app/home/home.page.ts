@@ -17,17 +17,24 @@ export class HomePage {
   data:any=[];
   httpCliet=inject(HttpClient)
 
-  ngOnInit(): void {
-  this.fetchData()
-  }
+ 
 
-
-  fetchData(){
+  fetchData1(){
     this.httpCliet.get('http://localhost:2001')
     .subscribe((data:any)=>{
-      console.log(data.result)
-      this.data=data.result;
+      console.log(data.morningAzkar)
+      this.data=data.morningAzkar;
     })
   }
   
+
+
+  fetchData2(){
+    this.httpCliet.get('http://localhost:2001')
+    .subscribe((data:any)=>{
+      console.log(data.adhkarAfterPrayer)
+      this.data=data.adhkarAfterPrayer;
+    })
+  }
+
 }

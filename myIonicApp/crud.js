@@ -19,18 +19,21 @@ database:'adkar'
 
 
 app.get('/', (req, res) => {
-  con.query("SELECT * FROM MorningAzkar", (err, result) => {
-      if (err) {
-          console.error("Error executing doctors query:", err);
-          return res.status(500).json({ error: "Failed to fetch doctors data" });
-      }
-      else{
-        res.json({result});
-      }
-
-      
+    con.query("SELECT * FROM MorningAzkar", (err, morningResult) => {
+        if (err) {
+            console.error("Error executing MorningAzkar query:", err);
+            return res.status(500).json({ error: "Failed to fetch MorningAzkar data" });
+        }
+        con.query("SELECT * FROM adhkar_after_prayer", (err, adhkarResult) => {
+          if (err) {
+              console.error("Error executing adhkar_after_prayer query:", err);
+              return res.status(500).json({ error: "Failed to fetch adhkar_after_prayer data" });
+          }
+          res.json({ morningAzkar: morningResult, adhkarAfterPrayer: adhkarResult });
+        });
+    });
   });
-});
+  
 
 
     
