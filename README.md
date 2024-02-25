@@ -22,6 +22,6 @@ $ npm install -g ionic
 $ ionic start myIonicApp blank 
 $ cd myIonicApp
 $ ionic serve
-
+```
 
 
