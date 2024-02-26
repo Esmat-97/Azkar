@@ -24,4 +24,8 @@ $ cd myIonicApp
 $ ionic serve
 ```
 
+# Demo
+[Screencast from 2024-02-26 02-43-46.webm](https://github.com/Esmat-97/Azkar/assets/158211063/08bda09b-f8aa-450a-91de-5a2ceb7b7188)
+
+
 
