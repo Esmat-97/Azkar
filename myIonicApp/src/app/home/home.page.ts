@@ -4,13 +4,19 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { RouterLink } from '@angular/router';
+import { AboutPage } from '../about/about.page';
+
+
 @Component({
   selector: 'app-home',
-  imports:[CommonModule,IonicModule],
+  imports:[CommonModule,IonicModule,RouterLink,AboutPage],
   standalone:true,
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
+
+
 export class HomePage {
 
   constructor(private httpcliet:HttpClient) {}
