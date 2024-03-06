@@ -1,4 +1,5 @@
-use adkar;
+-- create database adkar;
+-- use adkar;
 
 -- CREATE TABLE MorningAzkar (
 --     id INT AUTO_INCREMENT PRIMARY KEY,

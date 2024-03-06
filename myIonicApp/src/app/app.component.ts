@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   constructor() {}
+
+  showAlert(msg:string):string{
+    return msg;
+  }
 }
