@@ -8,6 +8,7 @@ import { RouterLink } from '@angular/router';
 import { AboutPage } from '../about/about.page';
 
 
+
 @Component({
   selector: 'app-home',
   imports:[CommonModule,IonicModule,RouterLink,AboutPage],
