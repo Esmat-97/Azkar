@@ -29,21 +29,19 @@
         transform: translateY(-50%);
        display: block;
         padding: 25px;
-        div{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #eeeeee;
-            width: 43%;
-            height: 15vh;
-            color: #444;
-           flex-direction: column;
-           margin-bottom: 40px;
-        }
-
-        ion-icon{
-font-size: 3rem;
-color: #999;
-margin-bottom: 16px;
-        }
     }
+
+    #container div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #eeeeee;
+        width: 60%;
+        height: 15vh;
+        color: #444;
+       flex-direction: column;
+       margin-bottom: 40px;
+    }
+
+
+    

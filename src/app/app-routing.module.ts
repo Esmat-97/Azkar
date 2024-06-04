@@ -26,6 +26,10 @@ const routes: Routes = [
     path: 'morning',
     loadChildren: () => import('./morning/morning.module').then( m => m.MorningPageModule)
   },
+  {
+    path: 'evining',
+    loadChildren: () => import('./evining/evining.module').then( m => m.EviningPageModule)
+  },
 
 ];
 
