@@ -2,17 +2,20 @@ import { Component, OnInit } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { inject } from '@angular/core';
+import { Router } from '@angular/router';
+import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-morning',
   standalone:true,
-  imports:[NgFor],
+  imports:[NgFor , IonicModule],
   templateUrl: './morning.page.html',
   styleUrls: ['./morning.page.scss'],
 })
 export class MorningPage implements OnInit {
 
 httpclint=inject(HttpClient)
+rot=inject(Router)
 
 data:any=[];
 
@@ -21,5 +24,11 @@ data:any=[];
 this.data=res
     })
   }
+
+
+  goBack() {
+    this.rot.navigate(['/home']);
+  }
+
 
 }
