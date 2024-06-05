@@ -14,13 +14,14 @@ import { IonicModule } from '@ionic/angular';
 })
 export class MorningPage implements OnInit {
 
-httpclint=inject(HttpClient)
+constructor(  private httpclient:HttpClient){}
+
 rot=inject(Router)
 
 data:any=[];
 
   ngOnInit() {
-    this.httpclint.get('http://localhost:2001/morning').subscribe((res:any)=>{
+    this.httpclient.get('http://localhost:2001/morning').subscribe((res:any)=>{
 this.data=res
     })
   }

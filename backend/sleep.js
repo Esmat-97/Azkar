@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 
 app.get('/', async (req, res) => {
     try {
-        const collection = req.database.collection("morning");
+        const collection = req.database.collection("sleep");
 
         const documents = await collection.find({}).toArray();
         res.status(200).json(documents);
@@ -27,7 +27,7 @@ app.get('/', async (req, res) => {
 
 app.post('/', async (req, res) => {
     try {
-        const collection = req.database.collection("morning");
+        const collection = req.database.collection("sleep");
         const doc = req.body;
         const result = await collection.insertOne(doc);
 
@@ -47,7 +47,7 @@ app.post('/', async (req, res) => {
 app.delete('/:id', async (req, res) => {
     try {
 ;
-        const collection = req.database.collection("morning");
+        const collection = req.database.collection("sleep");
 
         const documentId = req.params.id;
 
@@ -70,7 +70,7 @@ app.delete('/:id', async (req, res) => {
   
 app.get('/num', async (req, res) => {
     try {
-        const collection = req.database.collection("morning");
+        const collection = req.database.collection("sleep");
         // Retrieve the inserted document
         const doctors = await collection.find( { _id: { $exists: true } } ).count()
 

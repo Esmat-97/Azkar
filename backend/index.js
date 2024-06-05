@@ -13,14 +13,27 @@ const  morningRouter=require('./morning');
 app.use('/morning', morningRouter);
 
 
+
 const  eviningRouter=require('./evining');
 app.use('/evining', eviningRouter);
+
+
+
+const  sleepRouter=require('./sleep');
+app.use('/sleep', sleepRouter);
+
+
+const  adhkar_after_prayer_Router=require('./adhkar_after_prayer');
+app.use('/adhkar_after_prayer', adhkar_after_prayer_Router);
     
+const port=2001;
+const hostname= `localhost`;
+
+
 
 /*    */
-app.listen(2001,()=>{
-    console.log('the server listen at posrt http://localhost:2001');
+app.listen(port, hostname ,()=>{
+    console.log(`the server listen at posrt  http://${hostname}:${port}/`);
     });
 
 
-  
