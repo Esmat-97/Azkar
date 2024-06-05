@@ -1,13 +1,25 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>sleep</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">sleep</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+
+<body>
+<br>
+<br>
+  <div class="container">
+     
+      <div class="azkar-item" *ngFor="let x of data">
+          <p class="azkar-text">{{x.text}}</p>
+          <div class="azkar-text">{{x.count}}</div>
+      </div>
+ 
+      <!-- Add more Azkar items here -->
+  </div>
+</body>

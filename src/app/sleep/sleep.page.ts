@@ -14,9 +14,21 @@ import { Router } from '@angular/router';
 })
 export class SleepPage implements OnInit {
 
-  constructor() { }
+
+  constructor( private rot:Router) { }
+
+  httpclint=inject(HttpClient)
+  data:any=[];
 
   ngOnInit() {
+    this.httpclint.get('http://localhost:2001/sleep').subscribe((res:any)=>{
+      this.data=res
+          })
+  }
+
+
+  goBack() {
+    this.rot.navigate(['/home']);
   }
 
 }
