@@ -26,12 +26,12 @@ app.use('/sleep', sleepRouter);
 const  adhkar_after_prayer_Router=require('./adhkar_after_prayer');
 app.use('/adhkar_after_prayer', adhkar_after_prayer_Router);
     
+
+
+/*   */
 const port=2001;
 const hostname= `localhost`;
 
-
-
-/*    */
 app.listen(port, hostname ,()=>{
     console.log(`the server listen at posrt  http://${hostname}:${port}/`);
     });

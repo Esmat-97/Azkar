@@ -6,27 +6,29 @@ import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-evining',
+  selector: 'app-prayer',
   standalone:true,
   imports:[NgFor , IonicModule],
-  templateUrl: './evining.page.html',
-  styleUrls: ['./evining.page.scss'],
+  templateUrl: './prayer.page.html',
+  styleUrls: ['./prayer.page.scss'],
 })
-export class EviningPage implements OnInit {
+export class PrayerPage implements OnInit {
 
-  rot=inject(Router)
+  constructor( private rot:Router) { }
+
   httpclint=inject(HttpClient)
   data:any=[];
-  
-    ngOnInit() {
-      this.httpclint.get('http://localhost:2001/evining').subscribe((res:any)=>{
-  this.data=res
-      })
-    }
+
+  ngOnInit() {
+    this.httpclint.get('http://localhost:2001/adhkar_after_prayer').subscribe((res:any)=>{
+      this.data=res
+          })
+  }
 
 
-    goBack() {
-      this.rot.navigate(['/home']);
-    }
   
+  goBack() {
+    this.rot.navigate(['/home']);
+  }
+
 }
